@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technothon 2023</title>
+    <meta name=description content="A 24-hours hackathon exclusively for Polytechnic Students">
+    <!-- <meta name=author content=""> -->
+    <meta name=keywords
+        content="Technothon 2023, Hackathon, VESP, Mumbai, Vivekanand Education Society's Polytechnic, Chembur">
+    <meta property=og:title content="Technothon 2023">
+    <meta property=og:description content="TECHNOTHON 2023 is first of its kind hackathon in Mumbai. A 24- hour nonstop hackathon exclusively for the students 
+    of Polytechnic colleges pan Mumbai. Our aim is to provide a platform for students
+    across the city to inculcate invaluable skills in product development
+    by building projects from scratch and competing with fellow mates
+    and in the process help identify their innovation and problemsolving skills.">
+    <meta property=og:url content="https://dummy.com/">
+    <meta property=og:image content="https://dummy.com/logo">
+    <meta property=og:image:width content=470>
+    <meta property=og:image:height content=246>
+    <meta property=og:site_name content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+        integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+        crossorigin="anonymous"></script>
+    <!--fevicon-->
+
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=devanagari,latin-ext"
+        rel=stylesheet>
+    <link rel=icon type=image/png href="assets/img/logo.png">
+    <link rel=apple-touch-icon href=apple-touch-icon.png>
+    <link rel=apple-touch-icon sizes=72x72 href=apple-touch-icon-72x72.png>
+    <link rel=apple-touch-icon sizes=114x114 href=apple-touch-icon-114x114.png>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188441075-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-188441075-2');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+</head>
+
+<body id=body-element>
+    <canvas id="stars"></canvas>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v9.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <!-- <div class="fb-customerchat" attribution="setup_tool" page_id="1018967011534840" theme_color="#007bff"
+        logged_in_greeting="Hi! Welcome to Pune's Biggest student driven Hackathon. How can we help you?"
+        logged_out_greeting="Hi! Welcome to Pune's Biggest student driven Hackathon. How can we help you?">
+    </div> -->
+
+    <!-- FB Chat Plugin ends -->
+    <div class=nav-main>
+        <div class=nav__content>
+            <ul class="nav__list active-nav-menu">
+                <li class=nav__list-item>
+                    <a href=#navabout id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">About</a>
+                </li>
+                <!-- <li class=nav__list-item>
+                    <a href=#navtheme id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">ProblemStatements</a>
+                </li> -->
+                <!-- <li class=nav__list-item>
+                    <a href=#navfaq id="navItem" class="active-nav-menu stick-cursor" onclick="addNavActive()">FAQ</a>
+                </li> -->
+                <li class=nav__list-item>
+                    <a href=#navprizes id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">Prizes</a>
+                </li>
+                <!-- <li class=nav__list-item>
+                    <a href=#navspeaker id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">Speakers</a>
+                </li> -->
+                <li class=nav__list-item>
+                    <a href=#navsponsors id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">Sponsors</a>
+                </li>
+                <li class=nav__list-item>
+                    <a href=#navcontact id="navItem" class="active-nav-menu stick-cursor"
+                        onclick="addNavActive()">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="navigation-wrap cbp-af-header">
+        <div class="container-fluid anime-4">
+            <div class=row>
+                <div class="col align-self-center pr-0">
+                    <div class="logo">
+                        <a href=#top class=stick-cursor data-gal=m_PageScroll2id>
+                            <img id="fav-logo-innerve" src=assets/logos/iic-white.png alt=logo>
+                        </a>
+                    </div>  
+                    <div class="logo">
+                        <a href=#top class=stick-cursor data-gal=m_PageScroll2id>
+                            <img id="fav-logo-innerve" src=assets/logos/vesp-white.png alt=logo>
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href=#top class=stick-cursor data-gal=m_PageScroll2id>
+                            <img id="fav-logo-innerve" src=assets/logos/vespaa.png alt=logo>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-auto align-self-center pl-0" onclick="addNavActive()">
+                    <div class=section>
+                        <div class=nav-but-wrap>
+                            <div class="menu-icon stick-cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-------------------------------------------------- Home Section ---------------------------------------------------------->
+        <br>
+        <div class="container-fluid mt-mb-5">
+                    <br><br>
+            <div class="row justify-content-around">
+                <div class="col-11 row mt-md-5 pt-5">
+                    <div class="col-12 col-md-6 p-0">
+                        <img class="landing-logo" src=assets/images/main.svg alt=logo>
+                    </div>
+                    <div class="p-0 column home-mainbox-2">
+                        <div class="col-md-12  p-0 m-0 home-box1 d-flex align-items-center justify-content-around">
+                            TECHNOTHON 2023
+                        </div>
+                        <!-- <div class="col-md-12 home-box2 row p-0 m-0 justify-content-between">
+                            <div class="col-12 col-md-6 p-0 m-0 mt-3">
+                                <div class="p-0 m-0 home-box2-1 d-flex align-items-center justify-content-around">
+                                    Idea Submission
+                                </div>
+                                <div class="p-0 m-0 home-box2-2 d-flex align-items-center justify-content-around">
+                                    Date</div>
+                            </div>
+                            <div class="col-md-6 col-12 p-0 m-0 mt-3 box-box">
+                                <div class="p-0 m-0 home-box2-1 d-flex align-items-center justify-content-around">
+                                    24 hrs Hackathon</div>
+                                <div class="p-0 m-0 home-box2-2 d-flex align-items-center justify-content-around">Date</div>
+                            </div>
+                        </div> -->
+                        <div class="col-12  p-0 m-0 mt-3 home-box1 d-flex align-items-center justify-content-around">
+                            Registration Opening Soon 🚀
+                        </div>
+                        <div class="col-12 p-0 m-0 row justify-content-center">
+                            <!-- <div class="col-12 p-0 mt-3 m-0 home-button home-button-1">
+                                <a href=""
+                                    class="col-12 p-0 m-0 d-flex align-items-center justify-content-center" target="">
+                                    <img class="registerimg" src="assets/img/register.svg" alt="regsiter">
+                                    <h4 class="button-text">Registration Soon🚀</h4>
+                                </a>
+                            </div> -->
+                            <!-- <div class="col-md-6 col-12 p-0">
+                                <div class="col-12 d-flex flex-row flex-wrap justify-content-center p-0">
+                                    <div class="apply-button" data-hackathon-slug="innerve24hrs"
+                                        data-button-theme="light"></div>
+                                    <div class="apply-button" data-hackathon-slug="innerve24hrs"
+                                        data-button-theme="light"></div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-md-6 col-15 p-0 m-0 mt-3 home-button home-button-2">
+                                <a class="col-12 d-flex align-items-center justify-content-md-center">
+                                    <h4 class="button-text">Registration Opening Soon 🚀</h4>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="container mt-5">
+                    <div class="d-flex flex-row flex-wrap justify-content-around">
+                        <div class="apply-button" data-hackathon-slug="innerve24hrs" data-button-theme="light"
+                            style="height: 74px; width: 400px"></div>
+                        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+                    </div>
+                </div> -->
+
+                <!-- <div class="modal fade" id="reminderModal" tabindex="-1" role="dialog"
+                    aria-labelledby="reminderModalLabel" aria-hidden="true">
+                    <div class="modal-dialog d-flex flex-row flex-wrap justify-content-center" role="document">
+                        <div class="modal-content">
+                            <form class="modal-body" action="https://aitoss.club/api/v1/innerveReminder" method="POST">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="form-group">
+                                    <small id="emailHelp" class="form-text m-3 text-center text-muted">Enter your
+                                        E-Mail to
+                                        get reminder before registration closes</small>
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-center text-muted">We'll never share
+                                        your email with
+                                        anyone else.</small>
+                                </div>
+                                <div class="sub-btn">
+                                    <button class="btn btn-remind" type="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="countdown mt-mb-5 mb-md-5 ">
+                    <div class="row ">
+                        <div class="col-md-3 col-3 col-sm-3 ">
+                            <div class="timer-block ">
+                                <h4 class="timer-value" id="days">0</h4>
+                                <h5 class="timer-static">Days</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3 col-sm-3 ">
+                            <div class="timer-block">
+                                <h4 class="timer-value" id="hours">5</h4>
+                                <h5 class="timer-static">Hours</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3 col-sm-3">
+                            <div class="timer-block">
+                                <h4 class="timer-value" id="minutes">10</h4>
+                                <h5 class="timer-static">Minutes</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-3 col-sm-3">
+                            <div class="timer-block">
+                                <h4 class="timer-value" id="seconds">22</h4>
+                                <h5 class="timer-static">Seconds</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="container-fluid mt-5">
+                    <div class="row justify-content-around">
+                        <div class="col-10 text-center">
+                            <p class=mb-0>
+                                TECHNOTHON 2023 is first of its kind hackathon in Mumbai. A 24-
+                                hour nonstop hackathon exclusively for the students of Polytechnic
+                                colleges pan Mumbai. Our aim is to provide a platform for students
+                                across the city to inculcate invaluable skills in product development
+                                by building projects from scratch and competing with fellow mates
+                                and in the process help identify their innovation and problemsolving skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------------------------------- Home Section -------------------------------------------------------->
+
+
+        <!-------------------------------------------------- Prizes Section ------------------------------------------------------>
+
+        <div class="container prizes-main " id="navprizes ">
+            <div class="container mt-5 mb-5 ">
+
+            </div>
+            <div class="row justify-content-center text-center mt-5 mb-5 ">
+                <div class="col-md-6 ">
+                    <h2 class="prize-text ">Exciting Prizes</h2>
+                                            <p class="text-center"> Revealing Soon 🚀</p>
+                    <img class="prize-img-head phone-none " src="./assets/images/prizes.svg" alt=" " srcset=" ">
+                </div>
+                <!-- <div class="col-md-6 ">
+                    <div class="prize-img "><img src="./assets/img/1st.svg "></div>
+                    <div class="prize-img "><img src="./assets/img/2nd.svg "></div>
+                    <div class="prize-img "><img src="./assets/img/3rd.svg "></div>
+                </div> -->
+                <!-- <div class="container mt-5 ">
+                    <h5 id="goodie ">And many more goodies and credits for all participants</h5>
+                </div> -->
+            </div>
+        </div>
+
+
+        <!-- <div class="container-fluid">
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center m-5 pb-5">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="prize-wrapper mb-4">
+                        <div class="prize-card api-card-size">
+                            <input type="checkbox" id="card5" class="more" aria-hidden="true">
+                            <div class="prize-content">
+                                <div class="front">
+                                    <div class="inner">
+                                        <h6 class="api-plan">Matic</h6>
+                                        <div class="api-icon">
+                                            <img style="width:200px; height:auto; margin-bottom:30px; margin-top:50px"
+                                                src="./assets/img/matic.webp"
+                                                onerror="this.onerror=null;this.src='img/sponsors-img/matic.png';"
+                                                alt="Clerky">
+                                        </div>
+                                        <div>
+                                            <h2 class="ticket-price" style="color:black !important"><span>₹</span>15,000
+                                            </h2>
+                                        </div>
+
+                                        <label for="card5" class="prize-button" aria-hidden="true"
+                                            style="color:black !important; border-color: black;">
+                                            Details
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+
+                                        <div class="description">
+                                            <ul style="list-style-type:square;">
+                                                <li>₹15,000 for the best hack built on Ethereum and Matic OR<br>10,000
+                                                    for
+                                                    the best hack built on Ethereum<br></li>
+                                                <li>Eligibility to apply for internship/full-time roles and seed funding
+                                                    of
+                                                    up to 5,000 USD for winners!</li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="location">Matic</div>
+                                        <div class="price"><span>₹</span>15,000</div>
+                                        <label for="card5" class="prize-button return" aria-hidden="true">
+                                            Back
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="prize-wrapper mb-4">
+                        <div class="prize-card api-card-size">
+                            <input type="checkbox" id="card6" class="more" aria-hidden="true">
+                            <div class="prize-content">
+                                <div class="front">
+                                    <div class="inner">
+                                        <h6 class="api-plan">Portis</h6>
+                                        <div class="api-icon">
+                                            <img style="width:200px; height:auto; margin-bottom:25px; margin-top:35px"
+                                                src="./assets/img/Portis_Logo-Black.png" alt="Portis">
+                                        </div>
+                                        <div>
+                                            <h2 class="ticket-price" style="color:black !important"><span>₹</span>15,000
+                                            </h2>
+                                        </div>
+
+                                        <label for="card6" class="prize-button" aria-hidden="true"
+                                            style="color:black !important; border-color: black;">
+                                            Details
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+
+                                        <div class="description">
+                                            <ul style="list-style-type:square;">
+                                                <li>₹15,000 for best Dapp built on Portis</li>
+                                            </ul>
+
+                                        </div>
+                                        <div class="location">Portis</div>
+                                        <div class="price"><span>₹</span>15,000</div>
+                                        <label for="card6" class="prize-button return" aria-hidden="true">
+                                            Back
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="prize-wrapper mb-4">
+                        <div class="prize-card api-card-size">
+                            <input type="checkbox" id="card7" class="more" aria-hidden="true">
+                            <div class="prize-content">
+                                <div class="front">
+                                    <div class="inner">
+                                        <h6 class="api-plan">Tezos</h6>
+                                        <div class="api-icon">
+                                            <img style="width:200px; height:auto; margin-bottom:25px; margin-top:35px"
+                                                src="./assets/img/Tezos_Logo-Colored.png" alt="Tezos">
+                                        </div>
+                                        <div>
+                                            <h2 class="ticket-price" style="color:black !important">
+                                                <span>₹</span>20,000
+                                            </h2>
+                                        </div>
+
+                                        <label for="card7" class="prize-button" aria-hidden="true"
+                                            style="color:black !important; border-color: black;">
+                                            Details
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+
+                                        <div class="description">
+                                            <ol>
+                                                <li>₹20,000 for best Dapp built on Tezos
+
+                                                    Continuity Grant opportunity for exceptional builders</li>
+                                            </ol>
+
+                                        </div>
+                                        <div class="location">Tezos</div>
+                                        <div class="price"><span>₹</span>20,000</div>
+                                        <label for="card7" class="prize-button return" aria-hidden="true">
+                                            Back
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="prize-wrapper mb-4">
+                        <div class="prize-card api-card-size">
+                            <input type="checkbox" id="card4" class="more" aria-hidden="true">
+                            <div class="prize-content">
+                                <div class="front">
+                                    <div class="inner">
+                                        <h6 class="api-plan">echoAR</h6>
+                                        <div class="api-icon">
+                                            <img style="width:200px; height:auto; margin-bottom:17px; margin-top:35px;overflow:hidden;"
+                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/EchoAR_brand_logo_2.webp/386px-EchoAR_brand_logo_2.webp.png"
+                                                alt="echoAR">
+                                        </div>
+                                        <div>
+                                            <h2 class="ticket-price" style="color:black !important">
+                                                <span>$</span>50*
+                                            </h2>
+                                        </div>
+
+                                        <label for="card4" class="prize-button" aria-hidden="true"
+                                            style="color:black !important; border-color: black;">
+                                            Details
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <div class="inner">
+
+                                        <div class="description">
+                                            <ol>
+                                                <li>Amazon Gift Card worth $50</li>
+                                            </ol>
+                                        </div>
+                                        <div class="location">echoAR</div>
+                                        <div class="price">$50</div>
+                                        <label for="card4" class="prize-button return" aria-hidden="true">
+                                            Back
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+        <!-------------------------------------------------- Prizes Section ------------------------------------------------------>
+
+        <!-------------------------------------------------- Quiz Section ------------------------------------------------------>
+
+        <!-- <div class="container-fluid themes-main" id="nav-quiz">
+            <div class="row justify-content-around">
+                <div class="col-10">
+                    <div class="col-12 quiz-text">
+                        <h1 class="text-center">Pre-Innerve Quizzes</h1>
+                        <p class="text-center"> Below are the given themes for the fifth version of Innerve, If you
+                            think you have some out of the theme problems and solution do contact us !</p>
+                    </div>
+
+                    <div id="carouselQuizExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item quiz-carousel-item active pb-5 mb-5">
+                                <div class="row justify-content-center pt-5">
+                                    <div class="col-sm-8 col-md-8 col-lg-7 pr-lg-5 text-center justify-content-center">
+                                        <div class="img-quiz">
+                                            <img src="./assets/poster/figmd-quiz.png" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-10 col-lg-5 quiz-text align-self-center justify-content-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            FIGmd Quiz
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none"> Innerve in collaboration with FIGmd is
+                                            bringing <b>"Pre-Innerve Quiz | FIGmd"</b> for all the geeks out there.
+                                            <br> <b>Format:</b> 20 Multiple Choice Questions
+                                            carrying equal marks
+                                        </p>
+                                        <div class="d-flex flex-row flex-wrap quiz-btn">
+                                            <a class="quiz-button text-center" id="figmd-quiz" target="_blank"
+                                                href="https://dare2compete.com/o/pre-innerve-quiz-figmd-innerve-50-oss-club-army-institute-of-technology-148845?fbclid=IwAR3O-O_NRCwdzpRF40dcwZ4wqs05chdEzd4TwAIXQVBqJ6vrlh4yBfDgLl4">
+                                                Register
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item quiz-carousel-item pb-5 mb-5">
+                                <div class="row justify-content-center pt-5">
+                                    <div class="col-sm-8 col-md-8 col-lg-7 pr-lg-5 text-center justify-content-center">
+                                        <div class="img-quiz">
+                                            <img src="./assets/poster/hashmap-quiz.png" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-8 col-md-8 col-lg-5 quiz-text align-self-center justify-content-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            Hashmap Quiz
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none"> Innerve in
+                                            collaboration with Hashmap is bringing <b>"Pre-Innerve Quiz | Hashmap"</b>
+                                            for all
+                                            the geeks out there.
+                                            <br> <b>Format:</b> 20 Multiple Choice Questions
+                                            carrying equal marks
+                                        </p>
+                                        <div class="d-flex flex-row flex-wrap quiz-btn">
+                                            <a class="quiz-button text-center" id="hashmap-quiz" target="_blank"
+                                                href="https://dare2compete.com/o/pre-innerve-quiz-hashmap-innerve-50-oss-club-army-institute-of-technology-148841">
+                                                Register
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselQuixExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselQuizExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-------------------------------------------------- Quiz Section ------------------------------------------------------>
+
+        <!-------------------------------------------------- Steps Section ------------------------------------------------------->
+        <div class="container-fluid steps-main " id="navabout ">
+            <div class="row justify-content-around ">
+                    <!-- <div class="col-sm-10 col-md-8 col-xl-5 ">
+                        <div class="img-steps d-flex justify-content-around ">
+                            <img src="./assets/images/about.svg " alt=about>
+                        </div>
+                    </div> -->
+                <div class="col-10 steps-head text-center pb-4 mt-n2 mt-lg-n5 z-bigger ">
+                    <h2 class=mb-0>
+                        Vivekanand Education Society's Polytechnic Alumni Association
+                    </h2>
+                </div>
+                <div class="col-10 steps-para text-center mb-5 ">
+                    <p class=mb-0>
+                       A platform exclusively for Polytechnic students, where students from all engineering streams can participate in a 24-hour hackathon dedicated to innovation in the universe of engineering.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center ">
+                <div class="col-md-2 col-sm-12 justify-content-center text-center ">
+                    <a>
+                        <div id=circle class="d-flex ">
+                            <svg version=1.1 xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink
+                                x=0px y=0px width=30px height=30px viewBox="0 0 300 300 "
+                                enable-background="new 0 0 300 300 " xml:space=preserve>
+                                <defs>
+                                    <path id=circlePath
+                                        d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                </defs>
+                                <circle fill=none />
+                                <g>
+                                    <use xlink:href=#circlePath fill=none />
+                                    <text>
+                                        <textPath xlink:href=#circlePath>Let's build awesome together! •
+                                        </textPath>
+                                    </text>
+                                </g>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <h4 class="mb-5 ">
+                        6-step<br>process
+                    </h4>
+
+                    <div class="inv-buttons ">
+                        <p class="cm-buttons ">
+                            <a href=https://www.instagram.com/vespolytechnic_0004/  rel=noopener target=_blank
+                                class="btn btn-approach ">Instagram</a>
+                        </p>
+                        <p class="cm-buttons ">
+                            <a href=https://www.linkedin.com/school/ves-polytechnic/ rel=noopener
+                                target=_blank class="btn btn-approach ">LinkedIn</a>
+                        </p>
+                        <p class="cm-buttons ">
+                            <a href=https://www.facebook.com/people/VESP-Diploma-Engineering/100063678624978/ rel=noopener target=_blank
+                                class="btn btn-approach ">Facebook</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-around qna-right ">
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-1 id="collapseExample-q1 " role=button aria-expanded=false
+                            aria-controls=collapseExample-1 aria-label=collapseExample-1>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">1&nbsp;&nbsp;</span> Team Formation & Brain
+                                    Storming</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q1-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-1>
+                            <p>
+                                Forming to Storming in the contest plays prime role to ace among your competitors.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-2 id="collapseExample-q2 " role=button aria-expanded=false
+                            aria-controls=collapseExample-2 aria-label=collapseExample-2>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">2&nbsp;&nbsp;</span> Registration & Idea
+                                    Submission</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q2-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-2>
+                            <p>
+                                Register your team and submit your idea in the form of ppt/pdf/video presentation on
+                                the
+                                link given at the top of this page.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-4 id="collapseExample-q4 " role=button aria-expanded=false
+                            aria-controls=collapseExample-4 aria-label=collapseExample-4>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">3&nbsp;&nbsp;</span> Shortlisting Contenders</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q4-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-4>
+                            <p>
+                                Candidates with best idea gets qualified for the next phase for a real-time
+                                implementation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-5 id="collapseExample-q5 " role=button aria-expanded=false
+                            aria-controls=collapseExample-5 aria-label=collapseExample-5>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">4&nbsp;&nbsp;</span> 24hrs Live Hackathon</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q5-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-5>
+                            <p>
+                                Pace with your competitors in a 24hr live hackathon which invloves the idea
+                                implementation through code.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-6 id="collapseExample-q6 " role=button aria-expanded=false
+                            aria-controls=collapseExample-6 aria-label=collapseExample-6>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">5&nbsp;&nbsp;</span> Project Presentation</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q6-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-6>
+                            <p>
+                                Judges evaluate the overall implementation and application of the idea in terms of
+                                productiveness of the concept.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse
+                            href=#collapseExample-7 id="collapseExample-q7 " role=button aria-expanded=false
+                            aria-controls=collapseExample-7 aria-label=collapseExample-7>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">6&nbsp;&nbsp;</span> Winner Declaration</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="collapseExample-q7-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=collapseExample-7>
+                            <p>
+                                Winners are awarded with prize-money worth their efforts followed by the closing
+                                ceremony
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------- Steps Section ------------------------------------------------------->
+
+        <!-------------------------------------------------- Themes Section ------------------------------------------------------>
+
+        <div class="container-fluid themes-main" id="navtheme">
+            <div class="row justify-content-around">
+                <div class="col-10">
+                    <div class="col-12 themes-text">
+                        <h1 class="text-center">Problem Statements</h1>
+                        <p class="text-center"> Coming Soon 🚀</p>
+                    </div>
+
+                    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="./assets/img/health.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            Health care
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">Looking at Healthcare in a completely new
+                                            way
+                                            focusing on earlier, pre-symptomatic disease detection and prevention,
+                                            instead of late diagnosis helping clinicians access more information
+                                            and intervene sooner with targeted treatments.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="./assets/img/covid.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            Covid
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">It's an open opportunity for all the
+                                            developers out there to build software solutions that drive social
+                                            impact,
+                                            aim to tackle some of the challenges related to the current coronavirus
+                                            (COVID 19) pandemic.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="./assets/img/transportation.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class=mb-4>
+                                            Transport
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">India is still facing various problems
+                                            such
+                                            as traffic congestion, parking issues, environmental problems, etc.
+                                            These
+                                            are the main problems of the present scenario and we want
+                                            to explore solutions to resolve these transportation issues.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="assets/img/smart-city.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            Smart City
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">Ever got the chance of making your city a
+                                            better place? Well, now is the time to think and act. Gather information
+                                            and
+                                            together, in a collaborative fashion, build solutions that
+                                            will make our city a more efficient and intelligent place to live.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="./assets/img/blockchain.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class=mb-4>
+                                            Blockchain
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">From traceable supply chains to permanent
+                                            identity for refugees, blockchain is pioneering transparent and secure
+                                            business processes. Blockchain technology provides new infrastructure
+                                            to build the next innovative applications.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center pt-5 mt-lg-5">
+                                    <div class="col-sm-10 col-md-8 col-lg-7 pr-lg-5">
+                                        <div class="img-themes">
+                                            <img src="./assets/img/edutech.svg" alt="Health-care">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-sm-10 col-md-8 col-lg-5 themes-text align-self-center text-center text-lg-left mt-4 mt-lg-0">
+                                        <h3 class="mb-4">
+                                            EduTech
+                                        </h3>
+                                        <p class="mb-4 mb-lg-5">
+                                            <br class="d-inline d-lg-none">Lack of proper transportation to school,
+                                            basic infrastructure, qualified teachers, quality of education, low
+                                            awareness of importance of education, etc are just small portion of
+                                            challenges which holds back the development.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-------------------------------------------------- Themes Section ------------------------------------------------------>
+
+        <!-------------------------------------------------- FAQ Section ------------------------------------------------------>
+
+        <!-- <div class="steps-main container-fluid " id="navfaq ">
+            <div class="row justify-content-center pt-5 ">
+                <div class="col-md-2 col-sm-12 justify-content-center text-center ">
+                    <h4>
+                        FAQ's
+                    </h4>
+                    <div class="pt-4 inv-buttons ">
+                        <p>
+                            <a href="" el=noopener target=_blank
+                                class="btn btn-approach ">Registration</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-8 justify-content-around qna-right ">
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-1
+                            role=button aria-expanded=false aria-controls=faq-1 aria-label=faq-1 id=faq-q1>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">1&nbsp;&nbsp;</span> What are the perks of attending
+                                    Innerve
+                                    5.0?
+                                </span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q1-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-1>
+                            <p>
+                                Sessions by the best speakers in their domains, a 24-hour hackathon with amazing
+                                problem
+                                statements and prizes! Goodies and Swags. Cmon, still need more?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-2
+                            role=button aria-expanded=false aria-controls=faq-2 aria-label=faq-2 id=faq-q2>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">2&nbsp;&nbsp;</span> Any specific qualifications to
+                                    be a
+                                    participant in the Hackathon?</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q2-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-2>
+                            <p>
+                                You love to code, you are more than welcome to participate in the Hackathon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-3
+                            role=button aria-expanded=false aria-controls=faq-3 aria-label=faq-3 id=faq-q3>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">3&nbsp;&nbsp;</span> Is there any registration fees
+                                    to
+                                    attend Innerve?
+                                </span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q3-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-3>
+                            <p>
+                                NO, it's FREE! Just bring your learning gadgets along.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-4
+                            role=button aria-expanded=false aria-controls=faq-4 aria-label=faq-4 id=faq-q4>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">4&nbsp;&nbsp;</span> Who can attend Innerve
+                                    5.0?</span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q4-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-4>
+                            <p>
+                                All the undergraduate students irrespective of their stream/branch are welcome to
+                                participate in the event.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-5
+                            role=button aria-expanded=false aria-controls=faq-5 aria-label=faq-5 id=faq-q5>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">5&nbsp;&nbsp;</span>Will Participants receive
+                                    Certificates?
+                                </span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q5-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-5>
+                            <p> Yes, participation certificates will be provided to all the participants PLUS who
+                                attend
+                                the event.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-6
+                            role=button aria-expanded=false aria-controls=faq-6 aria-label=faq-6 id=faq-q6>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">6&nbsp;&nbsp;</span> Can the team members be from
+                                    different
+                                    colleges?
+                                </span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q6-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-6>
+                            <p>
+                                Yes, you are allowed to work with the team of your choice. But college details in
+                                form
+                                will be of team leader only.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="qna ">
+                        <div onclick="changeFaqIcon(this.id) " class="qna-ques " data-toggle=collapse href=#faq-7
+                            role=button aria-expanded=false aria-controls=faq-7 aria-label=faq-7 id=faq-q7>
+                            <p class="col-12 d-flex flex-row justify-content-between align-items-center ">
+                                <span><span class="qna-number ">7&nbsp;&nbsp;</span> What can be the maximum size of
+                                    our
+                                    team?
+                                </span>
+                                <span class="float-right qna-icon-plus mt-0 " id="faq-q7-qna-icon ">+</span>
+                            </p>
+                        </div>
+                        <div class="collapse qna-answer " id=faq-7>
+                            <p>
+                                A team of four is preferred , while triplets , pairs and singles are also allowed.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-------------------------------------------------- FAQ Section ------------------------------------------------------>
+
+
+
+        <!---------------------------------------------------- Judges Section ------------------------------------------------------->
+        <!-- <div class="container-fluid speaker-main " id="navspeaker ">
+            <div class="container mb-4 ">
+                <h2 class="mb-5 " style="text-align: center; ">Our Judges</h2>
+            </div>
+            <div class="container" id="app">
+                <div class="team-container">
+                    <div class="person-list">
+                        <div class="person" v-for="(person,index) in persons">
+                            <img class="person-img" :src="person.photo">
+                            <div class="person-details">
+                                <div class="d-flex flex-row flex-wrap person-social">
+                                    <a :href="person.link.linkedin"><img class="person-social-img"
+                                            src="./assets/img/linkedin.svg" alt=""></a>
+                                </div>
+                                <h2 class="person-title">{{person.name}}</h2>
+                                <p class="person-desc">{{person.title}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!---------------------------------------------------- Judges Section ------------------------------------------------------->
+
+
+        <!---------------------------------------------------- Speaker Section ------------------------------------------------------->
+
+        <!-- <div class="container-fluid speaker-main " id="navspeaker ">
+            <div class="container mb-4 ">
+                <h2 class="mb-5 " style="text-align: center; ">Our Speakers</h2>
+            </div>
+            <div class="row justify-content-center ">
+                <div class="col-md-10 d-flex flex-row flex-wrap justify-content-center ">
+                    <div class="col-md-4 speaker-card text-center ">
+                        <a href="https://www.youtube.com/watch?v=zVEsJ0-HrCs&feature=youtu.be" target="_blank">
+                            <div class="col-12 pb-3 "><img class="speaker-img " src="./assets/Speaker/tamanjitSir.jpeg"
+                                    alt=" ">
+                            </div>
+                            <h4>Tamanjit Bindra</h4>
+                            <p>Co-Founder</p>
+                            <p>Kaagaz Scanner</p>
+                            <h4>John Doe</h4>
+                            <p>CEO, FAAMG
+                            </p>
+                            <img class="card-arrow" src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+                    <div class="col-md-4 speaker-card text-center">
+                        <a href="https://www.youtube.com/watch?v=aIVVSANTexc&feature=youtu.be" target="_blank">
+                            <div class="col-12 pb-3 "><img class="speaker-img " src="./assets/Speaker/varun.jpeg "
+                                    alt=" ">
+                            </div>
+                            <h4>Varun Jain</h4>
+                            <p>Co-Founder & CEO</p>
+                            <p>udChalo</p>
+                            <img class="card-arrow " src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+                    <div class="col-md-4 speaker-card text-center">
+                        <a href="https://www.youtube.com/watch?v=Tzw6hIrs9II&feature=youtu.be" target="_blank">
+                            <div class="col-12 pb-3 "><img class="speaker-img " src="./assets/Speaker/hashmap.png"
+                                    alt=" ">
+                            </div>
+                            <h4>Team Hashmap</h4>
+                            <p>Cloud Engineers</p>
+                            <p>Hashmap</p>
+                            <img class="card-arrow " src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+                    <div class="col-md-4 speaker-card text-center">
+                        <a href="https://www.linkedin.com/in/jalindar-karande/">
+                            <div class="col-12 pb-3 "><img class="speaker-img "
+                                    src="https://media-exp1.licdn.com/dms/image/C5603AQFamEyvL7j9YA/profile-displayphoto-shrink_200_200/0/1517789946978?e=1620259200&v=beta&t=NsegR0w_Z4cUYW6ax14_VjllyqCIT1KKRcw-lC6XC6k"
+                                    alt=" ">
+                            </div>
+                            <h4>Raghuram Katti
+                            </h4>
+                            <p>Project & Competency Manager</p>
+                            <p>Hashmap</p>
+                            <img class="card-arrow " src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+                    <div class="col-md-4 speaker-card text-center">
+                        <a href="https://www.linkedin.com/in/jalindar-karande/">
+                            <div class="col-12 pb-3 "><img class="speaker-img "
+                                    src="https://media-exp1.licdn.com/dms/image/C5103AQGyIsd3xWnjkg/profile-displayphoto-shrink_200_200/0/1528966108981?e=1620259200&v=beta&t=whd5x-c8k2LgyvHJ69yp9IoetUYh41PX3jbeuoCYswU"
+                                    alt=" ">
+                            </div>
+                            <h4>Jalindar Karande
+                            </h4>
+                            <p>Lead Cloud Engineer-Data</p>
+                            <p>Hashmap</p>
+                            <img class="card-arrow " src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+                    <div class="col-md-4 speaker-card text-center">
+                        <a href="https://www.linkedin.com/in/arshi-jilani-40157584/">
+                            <div class="col-12 pb-3 "><img class="speaker-img " src="./assets/Speaker/ArshiJilani.jpeg"
+                                    alt=" ">
+                            </div>
+                            <h4>Arshi Jilani
+                            </h4>
+                            <p>Cloud Engineer-Data</p>
+                            <p>Hashmap</p>
+                            <img class="card-arrow " src="./assets/img/right-arrow.svg "></img>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!---------------------------------------------------- Speaker Section ------------------------------------------------------->
+
+        <!--------------------------------------------------- Sponsors Section ------------------------------------------------------->
+
+        <div class="container sponsor-main " id="navsponsors " data-aos="fade-right " data-aos-once="true ">
+            <!-- <div class="row justify-content-center ">
+                <div class="col-12 text-center pb-4 z-bigger ">
+                    <h2>
+                        Our Sponsors
+                    </h2>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-12 d-flex flex-column align-items-center ">
+
+                <div class="col-md-10 col-12 background-sponsor row">
+                    <a href="https://www.hashmapinc.com/" target="_blank " class="col-md-6">
+                        <div class="col-md-12 d-flex flex-row flex-wrap justify-content-center align-items-center">
+                            <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="titleImg" src="./assets/sponsors/hashmap.png " alt="hashmap"
+                                    style="width: 100%; ">
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.figmd.com/" target="_blank " class="col-md-6">
+                        <div class="col-md-12 d-flex flex-row flex-wrap justify-content-center align-items-center">
+                            <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="titleImg" src="./assets/sponsors/figmd.png " alt="figmd"
+                                    style="width: 100%; ">
+                            </div>
+                        </div>
+
+                    </a>
+                    <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                        <p class="sponsor-subheader ">Title Sponsor</p>
+                    </div>
+
+                    <div class="col-md-12 p-3 ">
+                        <div
+                            class="col-md-12 d-flex flex-row flex-wrap justify-content-center align-items-center mb-3 ">
+                            <a href="https://accops.com/" target="_blank"
+                                class="col-md-6 justify-content-center align-items-center">
+                                <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                    <img class="coImg" src="./assets/sponsors/accops.jpg" alt="Accops"
+                                        style="width: 95%; ">
+                                </div>
+                            </a>
+                            <a href="https://devfolio.co/" target="_blank"
+                                class="col-md-6 justify-content-center align-items-center">
+                                <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                    <img class="coImg" src="./assets/sponsors/devfolio.png " alt="Devfolio"
+                                        style="width: 95%; ">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                            <p class="sponsor-subheader ">Co - Sponsor</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12 p-3 ">
+                        <div
+                            class="col-md-12 d-flex flex-row flex-wrap justify-content-center align-items-center mb-3 ">
+                            <a href="https://kaagaz.app/" target="_blank"
+                                class="col-md-6 d-flex justify-content-center align-items-center sponsor-card ">
+                                <img class="subImg" src="./assets/sponsors/kaagaz.png " style="width:70%;" alt="kaagaz">
+                            </a>
+                            <a href="https://deepinfolab.com" target="_blank"
+                                class="col-md-6 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="subImg" src="./assets/sponsors/DIL.png " alt="Deep Info Labs"
+                                    style="width:70%;">
+                            </a>
+                            <a href="https://www.linkedin.com/in/sathley/" target="_blank"
+                                class="col-md-6 d-flex justify-content-center align-items-center sponsor-card ">
+                                <img class="subImg" src="./assets/sponsors/saSir.png " style="width:70%;" alt="Sushant
+                                    Athley">
+                            </a>
+                            <a href="https://www.udchalo.com/" target="_blank"
+                                class="col-md-6 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="subImg" src="./assets/sponsors/udchalo.png " alt="udchalo"
+                                    style="width:70%;">
+                            </a>
+                        </div>
+                        <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                            <p class="sponsor-subheader ">Sub - Sponsor</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-3 d-flex flex-row flex-wrap justify-content-center">
+                        <a href="https://matic.network/" target="_blank " class="col-md-4 col-12">
+                            <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="supImg" src="./assets/sponsors/matic.png " alt="matic" style="width: 90%; ">
+                            </div>
+                        </a>
+                        <a href="https://www.portis.io/" target="_blank " class="col-md-4 col-12">
+                            <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class=" supImg" src="./assets/sponsors/portis.png " alt="portis"
+                                    style="width: 90%; ">
+                            </div>
+                        </a>
+                        <a href="https://tezos.com/" target="_blank " class="col-md-4 col-12">
+                            <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="supImg" src="./assets/sponsors/tezos.png " alt="tezos" style="width: 90%; ">
+                            </div>
+                        </a>
+                        <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                            <p class="sponsor-subheader ">Supporting Partner</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 p-3 ">
+                        <div
+                            class="col-md-12 d-flex flex-row flex-wrap justify-content-center align-items-center mb-3 ">
+                            <a href="https://thecodingculture.com/" target="_blank"
+                                class="col-md-6 justify-content-around align-items-center d-flex sponsor-card ">
+                                <img class="coPImg" src="./assets/sponsors/coding.png " alt="The coding culture"
+                                    style="width: 70%;">
+                            </a>
+                            <a href="https://dsc.community.dev/army-institute-of-technology/" target="_blank"
+                                class="col-md-6 justify-content-around d-flex align-items-center sponsor-card ">
+                                <img class="coPImg" src="./assets/sponsors/dsc_ait.png " alt="DSC AIT"
+                                    style="width: 70%; ">
+                            </a>
+                        </div>
+                        <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                            <p class="sponsor-subheader ">Community Partner</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-12 p-3 d-flex flex-row flex-wrap justify-content-center ">
+
+                    <a href="https://caffetable.com/" target="_blank " class="col-md-3 col-6">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/caffetable.png " alt="Caffetable"
+                                style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://www.taskade.com/ " target="_blank " class="col-md-3 col-6">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/taskade.jpg " alt="taskade "
+                                style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://balsamiq.com/ " target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/balsamiq.png " alt="balsamiq "
+                                style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://www.voiceflow.com/ " target="_blank " class="col-md-3 col-6 ">
+                        <div
+                            class="col-md-12 justify-content-around align-items-center d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/voiceflow.png" alt="voiceflow "
+                                style="width: 100%;">
+                        </div>
+                    </a>
+                    <a href="https://www.sketch.com/ " target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/sketch.png " alt="sketch " style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://repl.it/ " target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/repl.png " alt="repl.it " style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://www.axure.com/ " target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/axure.png " alt="axure " style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://givemycertificate.com/" target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/certificate.png " alt="Give My Certificate"
+                                style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://www.echoar.xyz/" target="_blank " class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/echoAR.png " alt="echoAR" style="width: 100%; ">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/chocokaju/ " target="_blank" class="col-md-3 col-6 ">
+                        <div class="col-md-12 justify-content-around d-flex align-items-center sponsor-card ">
+                            <img class="assimg" src="./assets/sponsors/chocokaju.png " alt="chocokaju"
+                                style="width: 100%; ">
+                        </div>
+                    </a>
+                    <div class="col-md-12 text-center mt-2 " style="height: 20px; ">
+                        <p class="sponsor-subheader ">Associate Sponsor</p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-md-12 d-flex flex-column align-items-center text-center main-sponsor ">
+                <h1 class="h1-sponsor ">Want To Become A Sponsor?</h1>
+                <br>
+
+                <h5>Please fill out this short form</h5>
+                <a href="https://drive.google.com/file/d/1_y5GwThDUYEOx7USZM6ll99SdxudJ3Sc/view?usp=share_link" target="_blank " class="btn-sponsor btn-1 ">
+                    <svg>
+                        <rect x="0 " y="0 " fill="none " width="100% " height="100% " />
+                    </svg>👉 Brochure 👈
+                </a>
+                <a href="https://innerve24hrs.typeform.com/to/FVUtonjv " target="_blank " class="btn-sponsor btn-1 ">
+                    <svg>
+                        <rect x="0 " y="0 " fill="none " width="100% " height="100% " />
+                    </svg>👉 Form 👈
+                </a>
+            </div>
+
+        </div>
+
+        <!--------------------------------------------------- Sponsors Section ------------------------------------------------------->
+
+        <!--------------------------------------------------- Contact Section -------------------------------------------------------->
+
+        <div class="container-fluid contact-main pt-5 " id="navcontact " data-aos="fade-right " data-aos-once="true ">
+            <div class="row justify-content-center ">
+                <div class="col-12 text-center mt-2 pb-4 z-bigger ">
+                    <h2>
+                        Contact Us!
+                    </h2>
+                </div>
+            </div>
+            <div id="mail-container ">
+                <div id="line-container ">
+                    <div class="line line-1 "></div>
+                    <div class="line line-4 "></div>
+                    <div class="line line-2 "></div>
+                    <div class="line line-5 "></div>
+                    <div class="line line-3 "></div>
+                </div>
+                <div id="mail "></div>
+            </div>
+            <div class="row justify-content-center p-5 social-ico " data-aos="fade-down " data-aos-once="true ">
+                <div class="social-icons ">
+                    <a href="https://www.instagram.com/vespolytechnic_0004/ " target="_blank "
+                        class="social-icon social-icon--instagram ">
+                        <i class="fa fa-instagram "></i>
+                        <div class="tooltip ">Instagram</div>
+                    </a>
+                    <a href="https://www.linkedin.com/school/ves-polytechnic/" target="_blank "
+                        class="social-icon social-icon--linkedin ">
+                        <i class="fa fa-linkedin "></i>
+                        <div class="tooltip ">LinkedIn</div>
+                    </a>
+                    <a href="hhttps://www.facebook.com/people/VESP-Diploma-Engineering/100063678624978/" target="_blank "
+                        class="social-icon social-icon--facebook ">
+                        <i class="fa fa-facebook "></i>
+                        <div class="tooltip ">Facebook</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 text-center ">
+                <p class=mb-0>
+                    Wanna Connect by mail?
+                </p>
+                <br>
+                <h6>Email : jeet.doshi.vesp@gmail.com</h6>
+                <h6>Phone : +91 83560 02279</h6>
+                <p class="mb-0 small-ph mt-3 justify-content-center ">
+                    <a href=mailto:jeet.doshi.vesp@gmail.com class="btn btn-approach " id="mail-btn " rel=noopener
+                        target=_blank>Click here for mail</a>
+                </p>
+            </div>
+        </div>
+
+        <!--------------------------------------------------- Contact Section -------------------------------------------------------->
+
+        <!---------------------------------------------------- Waves Section --------------------------------------------------------->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+        </div>
+
+        <!---------------------------------------------------- Waves Section --------------------------------------------------------->
+    </main>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js "
+        integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+        crossorigin=" anonymous "></script>
+    <script src="https://unpkg.com/@pqina/flip/dist/flip.min.js"></script>
+    <script src="js/app.js "></script>
+    <script src="js/snow.js "></script>
+</body>
+
+</html>
