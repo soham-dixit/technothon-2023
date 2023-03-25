@@ -162,3 +162,233 @@ $text-color: #3c3f64;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Variables
+$blue: #0099e0;
+$blue-hover: #007fba;
+$grey: #626262;
+$dark-grey: #fd0000;
+$light-grey: #d4d4d4;
+
+// Mixin
+
+// Mixin to handle responsive break points
+@mixin respond-to($media) {
+    @if $media ==mobile {
+
+        /* Mobile Portrait and Landscape */
+        @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+            @content;
+        }
+
+        /* Desktop styles */
+    }
+
+    @else if $media ==desktop {
+        @media screen and (min-device-width: 768px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+            @content;
+        }
+    }
+}
+
+// body {
+//     background: white;
+//     font-family: CerebriSans, Arial, Helvetica, sans-serif;
+// }
+
+// a {
+//     color: $blue;
+
+//     &:hover {
+//         color: $blue-hover;
+//     }
+// }
+
+// h2 {
+//     font-size: 52px;
+//     line-height: 1.288;
+//     font-weight: 500;
+//     margin: 0 0 34px;
+//     color: #303447;
+// }
+
+// h3 {
+//     font-size: 25px;
+//     line-height: 1.16;
+//     font-weight: 500;
+//     margin: 0 0 33px;
+//     color: #303447;
+// }
+
+b,
+strong {
+    font-weight: 500;
+}
+
+// Buttons
+
+.btn {
+    vertical-align: top;
+    outline: 0 !important;
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    font-weight: 500;
+    text-decoration: none !important;
+    border-width: 1px;
+    text-align: center;
+    padding: 14px 20px 16px;
+    font-size: 20px;
+    line-height: 21px;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0099e0;
+    border-color: #0099e0;
+}
+
+// Verticle tab
+.tabs {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+    width: 20%;
+    border-radius: 10px 0 0 10px;
+    background: white;
+    padding: 5px;
+}
+
+#vertical_tab_nav {
+    display: block;
+    width: 100%;
+
+    li a {
+        display: block;
+        font-size: 20px;
+        color: #112D4E;
+        text-decoration: none;
+        padding: 35px 15px;
+        background: white;
+        border-bottom: 1px solid $light-grey;
+
+        .fa-chevron-right {
+            display: none;
+        }
+
+        &.active {
+            background: #fff;
+            color: #112D4E;
+            border-bottom: 4px solid #112D4E;
+
+            .fa-chevron-right {
+                display: inline-block;
+            }
+        }
+    }
+
+    article {
+        display: none;
+        margin: 0px;
+        color: $grey;
+        padding: 10px 3% 3% 3%;
+
+        p {
+            font-size: 20px;
+            margin: 0 0 28px;
+        }
+    }
+}
+
+.tab_container {
+    display: block;
+    background: #112D4E;
+    width: 80%;
+    min-height: 829px;
+}
+
+.tabs {
+    display: none;
+}
+
+.tab_heading {
+    margin: 0;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 3%;
+    border-top: 1px solid $light-grey;
+
+    .fa-chevron-down {
+        display: none;
+    }
+
+    &.active {
+        background: #fff;
+        color: #112D4E;
+        border-bottom: 4px solid #112D4E;
+
+        .fa-chevron-right {
+            display: none;
+        }
+
+        .fa-chevron-down {
+            display: inline-block;
+        }
+    }
+}
+
+// Mobile styles
+
+@include respond-to(mobile) {
+    // h2 {
+    //     font-size: 32px;
+    // }
+
+    // h3 {
+    //     font-size: 22px;
+    // }
+
+    .tab_container {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+// Desktop styles
+@include respond-to(desktop) {
+    .tab_container {
+        float: left;
+        padding: 10px 3% 3% 3%;
+        border-radius: 0 10px 10px 0;
+        width: 80%;
+    }
+
+    .tabs {
+        display: block;
+    }
+
+    .tab_heading {
+        display: none;
+    }
+
+    article {
+        padding: 0;
+    }
+}

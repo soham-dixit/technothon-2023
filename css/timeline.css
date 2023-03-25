@@ -104,4 +104,136 @@
   .timeline ul li:nth-of-type(even) > div {
     left: 45px;
   }
+}
+b,
+strong {
+  font-weight: 500;
+}
+
+.btn {
+  vertical-align: top;
+  outline: 0 !important;
+  transition: all 0.3s ease-out;
+  font-weight: 500;
+  text-decoration: none !important;
+  border-width: 1px;
+  text-align: center;
+  padding: 14px 20px 16px;
+  font-size: 20px;
+  line-height: 21px;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0099e0;
+  border-color: #0099e0;
+}
+
+.tabs {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+  width: 20%;
+  border-radius: 10px 0 0 10px;
+  background: white;
+  padding: 5px;
+}
+
+#vertical_tab_nav {
+  display: block;
+  width: 100%;
+}
+#vertical_tab_nav li a {
+  display: block;
+  font-size: 20px;
+  color: #112D4E;
+  text-decoration: none;
+  padding: 35px 15px;
+  background: white;
+  border-bottom: 1px solid #d4d4d4;
+}
+#vertical_tab_nav li a .fa-chevron-right {
+  display: none;
+}
+#vertical_tab_nav li a.active {
+  background: #fff;
+  color: #112D4E;
+  border-bottom: 4px solid #112D4E;
+}
+#vertical_tab_nav li a.active .fa-chevron-right {
+  display: inline-block;
+}
+#vertical_tab_nav article {
+  display: none;
+  margin: 0px;
+  color: #626262;
+  padding: 10px 3% 3% 3%;
+}
+#vertical_tab_nav article p {
+  font-size: 20px;
+  margin: 0 0 28px;
+}
+
+.tab_container {
+  display: block;
+  background: #112D4E;
+  width: 80%;
+  min-height: 829px;
+}
+
+.tabs {
+  display: none;
+}
+
+.tab_heading {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 3%;
+  border-top: 1px solid #d4d4d4;
+}
+.tab_heading .fa-chevron-down {
+  display: none;
+}
+.tab_heading.active {
+  background: #fff;
+  color: #112D4E;
+  border-bottom: 4px solid #112D4E;
+}
+.tab_heading.active .fa-chevron-right {
+  display: none;
+}
+.tab_heading.active .fa-chevron-down {
+  display: inline-block;
+}
+
+/* Mobile Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .tab_container {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+/* Desktop styles */
+@media screen and (min-device-width: 768px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .tab_container {
+    float: left;
+    padding: 10px 3% 3% 3%;
+    border-radius: 0 10px 10px 0;
+    width: 80%;
+  }
+  .tabs {
+    display: block;
+  }
+  .tab_heading {
+    display: none;
+  }
+  article {
+    padding: 0;
+  }
 }/*# sourceMappingURL=timeline.css.map */
