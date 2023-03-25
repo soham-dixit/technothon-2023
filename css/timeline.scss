@@ -36,11 +36,11 @@ $text-color: #3c3f64;
 
                 time {
                     position: absolute;
-                    background: #f5af19;
-                    width: 150px;
+                    background: #FFD460;
+                    width: 160px;
                     height: 30px;
                     top: -15px;
-                    font-size: 12px;
+                    font-size: 14px;
                     color: #000000;
                     font-weight: bold;
                     border-radius: 5px;
@@ -48,6 +48,8 @@ $text-color: #3c3f64;
                     justify-content: center;
                     align-items: center;
                     letter-spacing: 2px;
+                    font-family: Poppins, sans-serif,;
+                    
                 }
 
                 div {
@@ -145,7 +147,7 @@ $text-color: #3c3f64;
     .timeline {
         ul {
             li {
-                margin-left: 1px;
+                margin-left: -30px;
 
                 div {
                     width: calc(100vw - 91px);

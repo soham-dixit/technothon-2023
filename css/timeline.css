@@ -30,11 +30,11 @@
 }
 .timeline ul li div time {
   position: absolute;
-  background: #f5af19;
-  width: 150px;
+  background: #FFD460;
+  width: 160px;
   height: 30px;
   top: -15px;
-  font-size: 12px;
+  font-size: 14px;
   color: #000000;
   font-weight: bold;
   border-radius: 5px;
@@ -42,6 +42,7 @@
   justify-content: center;
   align-items: center;
   letter-spacing: 2px;
+  font-family: Poppins, sans-serif;
 }
 .timeline ul li div div {
   height: 100px;
@@ -95,7 +96,7 @@
 }
 @media screen and (max-width: 600px) {
   .timeline ul li {
-    margin-left: 1px;
+    margin-left: -30px;
   }
   .timeline ul li div {
     width: calc(100vw - 91px);
