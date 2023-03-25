@@ -95,7 +95,7 @@
 }
 @media screen and (max-width: 600px) {
   .timeline ul li {
-    margin-left: 20px;
+    margin-left: 1px;
   }
   .timeline ul li div {
     width: calc(100vw - 91px);
