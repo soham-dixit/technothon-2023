@@ -3299,6 +3299,7 @@ body.load-anime .anime-4 {
     font-weight: 400;
     margin-top: .15rem;
     transition: .2s;
+    text-align: left;
 }
 
 .accordion__header {
