@@ -167,13 +167,7 @@ const app = new Vue({
 });
 
 
-
-
-
-
-
-
-
+// Timeline
 var items = document.querySelectorAll(".timeline li");
 
 function isElementInViewport(el) {
@@ -203,18 +197,7 @@ window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// guidelines
 
 $(document).ready(function () {
   // Select the first tab by default

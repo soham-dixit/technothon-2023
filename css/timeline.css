@@ -217,6 +217,13 @@ strong {
     display: block;
     margin: 0 auto;
     width: 100%;
+    min-height: 100%;
+  }
+  .tab_container h2 {
+    display: none;
+  }
+  .tab_container br {
+    display: none;
   }
 }
 /* Desktop styles */
