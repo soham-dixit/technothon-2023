@@ -222,9 +222,6 @@ strong {
   .tab_container h2 {
     display: none;
   }
-  .tab_container br {
-    display: none;
-  }
 }
 /* Desktop styles */
 @media screen and (min-device-width: 768px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
