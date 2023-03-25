@@ -3282,7 +3282,6 @@ body.load-anime .anime-4 {
 .accordion {
     display: grid;
     align-content: center;
-    height: 250vh;
 }
 
 .accordion__container {
