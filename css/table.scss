@@ -12,13 +12,13 @@ table {
     border-spacing: 1;
     border-collapse: collapse;
     background: #DAEFF1;
-    border-radius: 6px;
+    border-radius: 20px;
     overflow: hidden;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    color: #112D4E;
+    color: #ffffff;
 
     * {
         position: relative
@@ -26,12 +26,17 @@ table {
 
     td,
     th {
-        padding-left: 8px
+        padding-left: 8px;
+    }
+
+    td{
+        color: #112D4E;
+        border-bottom: 1px solid #000000;
     }
 
     thead tr {
         height: 60px;
-        background: #FFED86;
+        background: #112D4E;
         font-size: 16px;
     }
 
