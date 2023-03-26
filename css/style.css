@@ -3472,9 +3472,19 @@ body.load-anime .anime-4 {
     border-radius: 20px;
 }
 
+.modal-body{
+    font-size: 16px;
+}
+
 .close {
     color: #112D4E!important;
 }
+
+
+    .modal-dialog {
+            margin: 13vh auto 0px auto
+        }
+
 
 
 
