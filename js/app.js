@@ -1,43 +1,40 @@
 var particleNumber = 900;
 let windowWidth = $(window).width();
 
-if (windowWidth < 800 & windowWidth > 400) {
-    particleNumber = 600;
+if ((windowWidth < 800) & (windowWidth > 400)) {
+  particleNumber = 600;
 } else if (windowWidth <= 400) {
-    particleNumber = 400;
+  particleNumber = 400;
 }
 
-
-let body = document.getElementById("body-element")
+let body = document.getElementById("body-element");
 
 const addNavActive = () => {
-    if (body.classList.contains("nav-active"))
-        body.classList.remove("nav-active");
-    else
-        body.classList.add("nav-active");
-}
+  if (body.classList.contains("nav-active"))
+    body.classList.remove("nav-active");
+  else body.classList.add("nav-active");
+};
 
 // handle links with @href started with '#' only
-$(document).on('click', 'a[href^="#nav"]', function (e) {
-    // target element id
-    var id = $(this).attr('href');
+$(document).on("click", 'a[href^="#nav"]', function (e) {
+  // target element id
+  var id = $(this).attr("href");
 
-    // target element
-    var $id = $(id);
-    if ($id.length === 0) {
-        return;
-    }
+  // target element
+  var $id = $(id);
+  if ($id.length === 0) {
+    return;
+  }
 
-    // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
+  // prevent standard hash navigation (avoid blinking in IE)
+  e.preventDefault();
 
-    // top position relative to the document
-    var pos = $id.offset().top;
+  // top position relative to the document
+  var pos = $id.offset().top;
 
-    // animated top scrolling
-    $('html,body').animate({ scrollTop: pos });
+  // animated top scrolling
+  $("html,body").animate({ scrollTop: pos });
 });
-
 
 // window.onscroll = function() { scrollFunction() };
 
@@ -51,14 +48,42 @@ $(document).on('click', 'a[href^="#nav"]', function (e) {
 //     }
 // }
 
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
-        document.getElementById("fav-logo-innerve").style.transform = "scale(1.3)";
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+    document.getElementById("fav-logo-innerve").style.transform = "scale(1.3)";
+    document.getElementById("fav-logo-innerve2").style.transform = "scale(1.1)";
+    document.getElementById("fav-logo-innerve3").style.transform = "scale(1.1)";
+  } else {
+    document.getElementById("fav-logo-innerve").style.transform = "scale(1.3)";
+    document.getElementById("fav-logo-innerve2").style.transform = "scale(1.1)";
+    document.getElementById("fav-logo-innerve3").style.transform = "scale(1.1)";
+  }
+}
+
+// hide fav-logo-innerve2 and fav-logo-innerve3 on scroll in mobile view
+if (windowWidth < 600) {
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 300 ||
+      document.documentElement.scrollTop > 300
+    ) {
+      document.getElementById("fav-logo-innerve").style.display = "none";
+      document.getElementById("fav-logo-innerve2").style.display = "none";
+      document.getElementById("fav-logo-innerve3").style.display = "none";
     } else {
-        document.getElementById("fav-logo-innerve").style.transform = "scale(0.9)";
+      document.getElementById("fav-logo-innerve").style.display = "block";
+      document.getElementById("fav-logo-innerve2").style.display = "block";
+      document.getElementById("fav-logo-innerve3").style.display = "block";
     }
+  }
 }
 
 // countdown
@@ -83,13 +108,11 @@ function scrollFunction() {
 // }, 1000)
 
 const changeFaqIcon = (id) => {
-    //console.log(id);
-    if (document.getElementById(`${id}-qna-icon`).innerHTML == "+")
-        document.getElementById(`${id}-qna-icon`).innerHTML = "-";
-    else
-        document.getElementById(`${id}-qna-icon`).innerHTML = "+";
-}
-
+  //console.log(id);
+  if (document.getElementById(`${id}-qna-icon`).innerHTML == "+")
+    document.getElementById(`${id}-qna-icon`).innerHTML = "-";
+  else document.getElementById(`${id}-qna-icon`).innerHTML = "+";
+};
 
 // $(document).ready(function () {
 
@@ -113,59 +136,64 @@ const changeFaqIcon = (id) => {
 
 // });
 
-
 const persons = [
-    {
-        name: "Rohan Chougule",
-        photo: "https://media-exp1.licdn.com/dms/image/C5103AQGaCgq3V23bRw/profile-displayphoto-shrink_200_200/0/1585481116896?e=1618444800&v=beta&t=Y6SLSW9bqhZ_4yaprM5PoqqmU1sJzZd9rSyGIu4N7MI",
-        title: "Browserstack",
-        link: {
-            linkedin: "https://www.linkedin.com/in/rohan-chougule/",
-            twitter: ""
-        }
+  {
+    name: "Rohan Chougule",
+    photo:
+      "https://media-exp1.licdn.com/dms/image/C5103AQGaCgq3V23bRw/profile-displayphoto-shrink_200_200/0/1585481116896?e=1618444800&v=beta&t=Y6SLSW9bqhZ_4yaprM5PoqqmU1sJzZd9rSyGIu4N7MI",
+    title: "Browserstack",
+    link: {
+      linkedin: "https://www.linkedin.com/in/rohan-chougule/",
+      twitter: "",
     },
+  },
 
-    {
-        name: "Swastik Shrivastava",
-        photo: "https://media-exp1.licdn.com/dms/image/C5603AQEeXkpgCjMc2w/profile-displayphoto-shrink_200_200/0/1516499176018?e=1618444800&v=beta&t=5PUlEG5_N5sgFIM3i-BGvoiIGx0tQ8lT3215mq9AwBk",
-        title: "Mobile Premier League",
-        link: {
-            linkedin: "https://www.linkedin.com/in/swastik-shrivastava-cse/",
-            twitter: ""
-        }
+  {
+    name: "Swastik Shrivastava",
+    photo:
+      "https://media-exp1.licdn.com/dms/image/C5603AQEeXkpgCjMc2w/profile-displayphoto-shrink_200_200/0/1516499176018?e=1618444800&v=beta&t=5PUlEG5_N5sgFIM3i-BGvoiIGx0tQ8lT3215mq9AwBk",
+    title: "Mobile Premier League",
+    link: {
+      linkedin: "https://www.linkedin.com/in/swastik-shrivastava-cse/",
+      twitter: "",
     },
-    {
-        name: "Rajat Rawat",
-        photo: "https://media-exp1.licdn.com/dms/image/C5603AQHX_duNoLrvtQ/profile-displayphoto-shrink_200_200/0/1517025545916?e=1618444800&v=beta&t=WhzeV22ofIIVOTxncX7c3W50mHBV-8CM7onp8A7OoNE",
-        title: "Flipkart",
-        link: {
-            linkedin: "https://www.linkedin.com/in/rajat-rawat-cse/",
-            twitter: ""
-        }
+  },
+  {
+    name: "Rajat Rawat",
+    photo:
+      "https://media-exp1.licdn.com/dms/image/C5603AQHX_duNoLrvtQ/profile-displayphoto-shrink_200_200/0/1517025545916?e=1618444800&v=beta&t=WhzeV22ofIIVOTxncX7c3W50mHBV-8CM7onp8A7OoNE",
+    title: "Flipkart",
+    link: {
+      linkedin: "https://www.linkedin.com/in/rajat-rawat-cse/",
+      twitter: "",
     },
-    {
-        name: "Anirudh Murali",
-        photo: "https://media-exp1.licdn.com/dms/image/C5103AQGKWgb7lxo47w/profile-displayphoto-shrink_200_200/0/1566639617441?e=1618444800&v=beta&t=5mpOosCtfAk11uJPX2c3frmWrbKCkB2xB7Z89PUdBzY",
-        title: "ZS Associates",
-        link: { linkedin: "https://www.linkedin.com/in/anirudh-murali/", twitter: "" }
-    }
+  },
+  {
+    name: "Anirudh Murali",
+    photo:
+      "https://media-exp1.licdn.com/dms/image/C5103AQGKWgb7lxo47w/profile-displayphoto-shrink_200_200/0/1566639617441?e=1618444800&v=beta&t=5mpOosCtfAk11uJPX2c3frmWrbKCkB2xB7Z89PUdBzY",
+    title: "ZS Associates",
+    link: {
+      linkedin: "https://www.linkedin.com/in/anirudh-murali/",
+      twitter: "",
+    },
+  },
 ];
 
 const app = new Vue({
-    el: "#app",
-    data() {
-        return {
-            persons: persons,
-            selectedPersonIndex: null,
-            isSelected: false,
-            selectedPerson: null,
-            // inlineStyles: null,
-            isReady: false,
-            isOk: false
-        };
-    }
+  el: "#app",
+  data() {
+    return {
+      persons: persons,
+      selectedPersonIndex: null,
+      isSelected: false,
+      selectedPerson: null,
+      // inlineStyles: null,
+      isReady: false,
+      isOk: false,
+    };
+  },
 });
-
 
 // Timeline
 var items = document.querySelectorAll(".timeline li");
@@ -195,7 +223,6 @@ function callbackFunc() {
 
 window.addEventListener("load", callbackFunc);
 window.addEventListener("scroll", callbackFunc);
-
 
 // guidelines
 
@@ -237,45 +264,42 @@ $(".tab_heading").click(function () {
   $("ul.tabs li a[rel^='" + activeTab + "']").addClass("active");
 });
 
-
-
-
 // FAQs Seletion
 
 /*=============== ACCORDION ===============*/
-const accordionItems = document.querySelectorAll('.accordion__item')
+const accordionItems = document.querySelectorAll(".accordion__item");
 
 // 1. Selecionar cada item
-accordionItems.forEach((item) =>{
-    const accordionHeader = item.querySelector('.accordion__header')
+accordionItems.forEach((item) => {
+  const accordionHeader = item.querySelector(".accordion__header");
 
-    // 2. Seleccionar cada click del header
-    accordionHeader.addEventListener('click', () =>{
-        // 7. Crear la variable
-        const openItem = document.querySelector('.accordion-open')
-        
-        // 5. Llamar a la funcion toggle item
-        toggleItem(item)
+  // 2. Seleccionar cada click del header
+  accordionHeader.addEventListener("click", () => {
+    // 7. Crear la variable
+    const openItem = document.querySelector(".accordion-open");
 
-        // 8. Validar si existe la clase
-        if(openItem && openItem!== item){
-            toggleItem(openItem)
-        }
-    })
-})
+    // 5. Llamar a la funcion toggle item
+    toggleItem(item);
+
+    // 8. Validar si existe la clase
+    if (openItem && openItem !== item) {
+      toggleItem(openItem);
+    }
+  });
+});
 
 // 3. Crear una funcion tipo constante
-const toggleItem = (item) =>{
-    // 3.1 Crear la variable
-    const accordionContent = item.querySelector('.accordion__content')
+const toggleItem = (item) => {
+  // 3.1 Crear la variable
+  const accordionContent = item.querySelector(".accordion__content");
 
-    // 6. Si existe otro elemento que contenga la clase accorion-open que remueva su clase
-    if(item.classList.contains('accordion-open')){
-        accordionContent.removeAttribute('style')
-        item.classList.remove('accordion-open')
-    }else{
-        // 4. Agregar el height maximo del content
-        accordionContent.style.height = accordionContent.scrollHeight + 'px'
-        item.classList.add('accordion-open')
-    }
-}
+  // 6. Si existe otro elemento que contenga la clase accorion-open que remueva su clase
+  if (item.classList.contains("accordion-open")) {
+    accordionContent.removeAttribute("style");
+    item.classList.remove("accordion-open");
+  } else {
+    // 4. Agregar el height maximo del content
+    accordionContent.style.height = accordionContent.scrollHeight + "px";
+    item.classList.add("accordion-open");
+  }
+};
