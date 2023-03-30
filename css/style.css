@@ -445,7 +445,7 @@ body.nav-active .nav__list-item:nth-child(7) {
     backdrop-filter: blur(46px);
     font-style: normal;
     font-weight: 900;
-    font-size: 2.0em;
+    font-size: 1.5em;
     color: #fff !important;
     text-shadow: 5px 4px 10px #2968f0;
     font-family: 'Montserrat', sans-serif;
@@ -495,7 +495,7 @@ body.nav-active .nav__list-item:nth-child(7) {
     backdrop-filter: blur(46px);
     border-radius: 5px;
     height: 3.3em;
-    max-width: 48% !important;
+    max-width: 40% !important;
     cursor: pointer;
 }
 
@@ -518,7 +518,7 @@ body.nav-active .nav__list-item:nth-child(7) {
     backdrop-filter: blur(46px);
     border-radius: 5px;
     height: 2.8em;
-    max-width: 48%;
+    max-width: 40%;
 }
 
 .home-button-2 h4 {
@@ -549,7 +549,7 @@ iframe.devfolio-button-iframe {
         font-size: 2.5em;
     }
     .home-box11 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     .home-button-1 h4,
     .home-button-2 h4 {
