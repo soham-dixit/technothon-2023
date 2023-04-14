@@ -88,7 +88,7 @@ if (windowWidth < 600) {
 
 // countdown
 
-var techDate = new Date("April 14,2023 23:59:59").getTime();
+var techDate = new Date("April 15,2023 14:59:59").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
