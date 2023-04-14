@@ -88,24 +88,25 @@ if (windowWidth < 600) {
 
 // countdown
 
-// var InnerveDate = new Date("Mar 6,2021 09:00:00").getTime();
+var InnerveDate = new Date("April 14,2023 23:59:59").getTime();
 
-// var x = setInterval(function () {
-//     var now = new Date().getTime();
-//     var timeLeft = InnerveDate - now;
-//     // console.log(timeLeft, InnerveDate, now);
+var x = setInterval(function () {
+  var now = new Date().getTime();
+  var timeLeft = InnerveDate - now;
+  // console.log(timeLeft, InnerveDate, now);
 
-//     var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-//     var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//     var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-//     var seconds = Math.floor((timeLeft % (1000 * 60)) / (1000));
+  var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-//     document.getElementById("days").innerHTML = days;
-//     document.getElementById("hours").innerHTML = hours;
-//     document.getElementById("minutes").innerHTML = minutes;
-//     document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
 
-// }, 1000)
+  // check if
+}, 1000);
 
 const changeFaqIcon = (id) => {
   //console.log(id);
@@ -135,50 +136,6 @@ const changeFaqIcon = (id) => {
 //     });
 
 // });
-
-const persons = [
-  {
-    name: "Rohan Chougule",
-    photo:
-      "https://media-exp1.licdn.com/dms/image/C5103AQGaCgq3V23bRw/profile-displayphoto-shrink_200_200/0/1585481116896?e=1618444800&v=beta&t=Y6SLSW9bqhZ_4yaprM5PoqqmU1sJzZd9rSyGIu4N7MI",
-    title: "Browserstack",
-    link: {
-      linkedin: "https://www.linkedin.com/in/rohan-chougule/",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Swastik Shrivastava",
-    photo:
-      "https://media-exp1.licdn.com/dms/image/C5603AQEeXkpgCjMc2w/profile-displayphoto-shrink_200_200/0/1516499176018?e=1618444800&v=beta&t=5PUlEG5_N5sgFIM3i-BGvoiIGx0tQ8lT3215mq9AwBk",
-    title: "Mobile Premier League",
-    link: {
-      linkedin: "https://www.linkedin.com/in/swastik-shrivastava-cse/",
-      twitter: "",
-    },
-  },
-  {
-    name: "Rajat Rawat",
-    photo:
-      "https://media-exp1.licdn.com/dms/image/C5603AQHX_duNoLrvtQ/profile-displayphoto-shrink_200_200/0/1517025545916?e=1618444800&v=beta&t=WhzeV22ofIIVOTxncX7c3W50mHBV-8CM7onp8A7OoNE",
-    title: "Flipkart",
-    link: {
-      linkedin: "https://www.linkedin.com/in/rajat-rawat-cse/",
-      twitter: "",
-    },
-  },
-  {
-    name: "Anirudh Murali",
-    photo:
-      "https://media-exp1.licdn.com/dms/image/C5103AQGKWgb7lxo47w/profile-displayphoto-shrink_200_200/0/1566639617441?e=1618444800&v=beta&t=5mpOosCtfAk11uJPX2c3frmWrbKCkB2xB7Z89PUdBzY",
-    title: "ZS Associates",
-    link: {
-      linkedin: "https://www.linkedin.com/in/anirudh-murali/",
-      twitter: "",
-    },
-  },
-];
 
 const app = new Vue({
   el: "#app",
