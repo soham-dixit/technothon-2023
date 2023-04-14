@@ -3520,6 +3520,17 @@ body.load-anime .anime-4 {
     font-weight: bold;
 }
 
+.blink {
+    animation: blinker 2.0s linear infinite;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+        
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
 
 
 
