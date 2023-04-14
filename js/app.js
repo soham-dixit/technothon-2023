@@ -88,11 +88,11 @@ if (windowWidth < 600) {
 
 // countdown
 
-var InnerveDate = new Date("April 14,2023 23:59:59").getTime();
+var techDate = new Date("April 14,2023 23:59:59").getTime();
 
 var x = setInterval(function () {
   var now = new Date().getTime();
-  var timeLeft = InnerveDate - now;
+  var timeLeft = techDate - now;
   // console.log(timeLeft, InnerveDate, now);
 
   var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -105,7 +105,7 @@ var x = setInterval(function () {
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
 
-  // check if
+  // check if time is up
 }, 1000);
 
 const changeFaqIcon = (id) => {
