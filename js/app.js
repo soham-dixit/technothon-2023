@@ -95,6 +95,8 @@ var x = setInterval(function () {
   var timeLeft = techDate - now;
   // console.log(timeLeft, InnerveDate, now);
 
+  // change format of timeLeft
+
   var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -105,7 +107,13 @@ var x = setInterval(function () {
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
 
-  // check if time is up
+  if (timeLeft < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "0";
+    document.getElementById("hours").innerHTML = "0";
+    document.getElementById("minutes").innerHTML = "0";
+    document.getElementById("seconds").innerHTML = "0";
+  }
 }, 1000);
 
 const changeFaqIcon = (id) => {
